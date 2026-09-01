@@ -1,5 +1,6 @@
-// SKY FITNESS GYM - INTERACTIVE FRONTEND ENGINE WITH REAL CLIENT PHOTOS
+// SKY FITNESS GYM - INTERACTIVE FRONTEND ENGINE (TYGO FITNESS EDITION)
 document.addEventListener('DOMContentLoaded', () => {
+  initHeroSlider();
   initNavbar();
   initMobileMenu();
   initTrainingTabs();
@@ -7,7 +8,84 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
 });
 
-/* 1. Navbar Scroll Shrink & Active Link Highlight */
+/* 1. TYGO-STYLE HERO BANNER SLIDER ENGINE */
+function initHeroSlider() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('.hero-dots-indicator .dot');
+  const prevBtn = document.getElementById('heroPrevBtn');
+  const nextBtn = document.getElementById('heroNextBtn');
+
+  if (!slides.length) return;
+
+  let currentSlide = 0;
+  let slideInterval = null;
+  const slideDuration = 5000; // 5 Seconds auto-slide
+
+  function goToSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (dots[i]) dots[i].classList.remove('active');
+    });
+
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+  }
+
+  function nextSlide() {
+    goToSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    goToSlide(currentSlide - 1);
+  }
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    slideInterval = setInterval(nextSlide, slideDuration);
+  }
+
+  function stopAutoSlide() {
+    if (slideInterval) {
+      clearInterval(slideInterval);
+      slideInterval = null;
+    }
+  }
+
+  // Controls Event Listeners
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoSlide();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoSlide();
+    });
+  }
+
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      goToSlide(idx);
+      startAutoSlide();
+    });
+  });
+
+  // Pause auto slide when user hovers over hero
+  const heroSection = document.getElementById('home');
+  if (heroSection) {
+    heroSection.addEventListener('mouseenter', stopAutoSlide);
+    heroSection.addEventListener('mouseleave', startAutoSlide);
+  }
+
+  // Initialize Auto Slide
+  startAutoSlide();
+}
+
+/* 2. Navbar Scroll Shrink & Active Link Highlight */
 function initNavbar() {
   const navbar = document.querySelector('.navbar');
   const sections = document.querySelectorAll('section[id]');
@@ -40,7 +118,7 @@ function initNavbar() {
   });
 }
 
-/* 2. Fullscreen Mobile Drawer Menu Toggle */
+/* 3. Fullscreen Mobile Drawer Menu Toggle */
 function initMobileMenu() {
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -79,7 +157,7 @@ function initMobileMenu() {
   });
 }
 
-/* 3. Training Programs Interactive Tab Swapper with Real Client Photos */
+/* 4. Training Programs Interactive Tab Swapper */
 function initTrainingTabs() {
   const tabs = document.querySelectorAll('.training-tab');
   const programName = document.getElementById('programName');
@@ -145,7 +223,7 @@ function initTrainingTabs() {
   });
 }
 
-/* 4. Interactive Front-End BMI Calculator */
+/* 5. Interactive Front-End BMI Calculator */
 function initBMICalculator() {
   const bmiForm = document.getElementById('bmiForm');
   const sexBtns = document.querySelectorAll('.sex-btn');
@@ -195,7 +273,7 @@ function initBMICalculator() {
       pinPercentage = Math.max(5, ((bmiVal - 10) / (18.5 - 10)) * 25);
     } else if (bmiVal >= 18.5 && bmiVal <= 24.9) {
       category = 'NORMAL WEIGHT';
-      badgeColor = '#10b981';
+      badgeColor = '#00ff66';
       pinPercentage = 25 + ((bmiVal - 18.5) / (24.9 - 18.5)) * 30;
     } else if (bmiVal >= 25.0 && bmiVal <= 29.9) {
       category = 'OVERWEIGHT';
@@ -249,9 +327,9 @@ function animateNumber(element, start, end, duration) {
   window.requestAnimationFrame(step);
 }
 
-/* 5. Scroll Animations via IntersectionObserver */
+/* 6. Scroll Animations via IntersectionObserver */
 function initScrollAnimations() {
-  const animatedElements = document.querySelectorAll('.hero-title, .section-title, .intro-text-box, .training-tab, .bmi-card, .principle-row, .facility-card, .trainer-card, .review-card, .address-block');
+  const animatedElements = document.querySelectorAll('.hero-headline, .section-title, .intro-text-box, .training-tab, .bmi-card, .principle-row, .facility-card, .trainer-card, .pricing-card, .address-block');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
