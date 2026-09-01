@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Fitness Gym | Premium Training & Fitness Center in Dasanapura, Bengaluru</title>
+  <meta name="description" content="Transform your body at Sky Fitness Gym, Dasanapura, Bengaluru. Premium strength training, functional workouts, personal coaching, and interactive BMI calculator.">
+  <meta name="keywords" content="Sky Fitness Gym, Gym in Dasanapura, Gym in Bengaluru, Strength Training, Personal Trainer, Gym near Tamara Complex Alur Main Road">
+  
+  <!-- Favicon / Meta Icons -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-grid-pattern">
+
+  <!-- 1. STICKY BRAND NAVIGATION -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#home" class="nav-brand">
+        <div class="nav-logo-icon">S</div>
+        <div class="nav-brand-text">SKY <span>FITNESS</span></div>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#training" class="nav-link">Training</a></li>
+        <li><a href="#bmi" class="nav-link">BMI Calculator</a></li>
+        <li><a href="#facilities" class="nav-link">Facilities</a></li>
+        <li><a href="#trainers" class="nav-link">Trainers</a></li>
+        <li><a href="#location" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:+919632727612" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">JOIN NOW</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-nav-link">HOME</a></li>
+      <li><a href="#about" class="mobile-nav-link">ABOUT</a></li>
+      <li><a href="#training" class="mobile-nav-link">TRAINING</a></li>
+      <li><a href="#bmi" class="mobile-nav-link">BMI CALCULATOR</a></li>
+      <li><a href="#facilities" class="mobile-nav-link">FACILITIES</a></li>
+      <li><a href="#trainers" class="mobile-nav-link">TRAINERS</a></li>
+      <li><a href="#location" class="mobile-nav-link">LOCATION</a></li>
+    </ul>
+
+    <div class="mobile-contact-strip">
+      <p>📍 1st Floor, Tamara Complex, Alur Main Road, Dasanapura, Bengaluru</p>
+      <p>📞 Call: 096327 27612</p>
+      <div style="margin-top: 12px; display: flex; gap: 12px;">
+        <a href="tel:+919632727612" class="btn btn-primary mobile-action-btn">CALL NOW</a>
+        <a href="https://wa.me/919632727612" target="_blank" rel="noopener" class="btn btn-secondary mobile-action-btn">WHATSAPP</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. HERO SECTION -->
+  <section id="home" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text-content">
+        <div class="hero-bg-number">01</div>
+
+        <div class="tech-badge">
+          <span class="tech-dot"></span>
+          <span>SKY FITNESS GYM &bull; DASANAPURA</span>
+        </div>
+
+        <h1 class="hero-title">
+          BUILD<br>
+          YOUR<br>
+          <span class="green-stroke">STRONGEST</span><br>
+          SELF.
+        </h1>
+
+        <p class="hero-description">
+          An elite urban training space engineered for progress, raw strength, and total physical transformation. No excuses. Just performance.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="tel:+919632727612" class="btn btn-primary">START YOUR JOURNEY</a>
+          <a href="#training" class="btn btn-secondary">EXPLORE THE GYM</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-frame">
+          <img src="./images/hero_athlete.jpg" alt="Muscular Athlete Deadlifting at Sky Fitness Gym">
+          <div class="hero-accent-shape"></div>
+          
+          <div class="hero-floating-tag">
+            <span class="tech-dot"></span>
+            <p>HIGH PERFORMANCE ZONE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-bottom-strip">
+        <div class="strip-item">
+          <span class="strip-num">STRENGTH</span>
+          <span class="strip-label">Heavy Iron & Free Weights</span>
+        </div>
+        <div class="strip-item">
+          <span class="strip-num">CARDIO</span>
+          <span class="strip-label">Metabolic Conditioning</span>
+        </div>
+        <div class="strip-item">
+          <span class="strip-num">COACHING</span>
+          <span class="strip-label">1-on-1 Certified Guidance</span>
+        </div>
+        <div class="strip-item">
+          <span class="strip-num">RESULTS</span>
+          <span class="strip-label">Consistent Physical Growth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PERFORMANCE INTRO -->
+  <section id="about" class="intro-section">
+    <div class="container intro-grid">
+      <div class="intro-statement">
+        YOUR GOAL.<br>
+        YOUR DISCIPLINE.<br>
+        <span class="text-accent">YOUR RESULTS.</span>
+      </div>
+
+      <div class="intro-text-box">
+        <p class="intro-lead">
+          Sky Fitness Gym is built for individuals who demand more from their daily training routines.
+        </p>
+        <p class="intro-body">
+          Located on Alur Main Road, Dasanapura, our facility brings together heavy strength machinery, functional turf spaces, and dedicated personal coaching. Whether your goal is lean muscle mass, raw strength output, or fat loss, we provide the environment to make it happen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TRAINING PROGRAMS -->
+  <section id="training" class="training-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="tech-badge" style="margin-bottom: 16px;">
+          <span class="tech-dot"></span>
+          <span>PROGRAM SELECTION</span>
+        </div>
+        <h2 class="section-title">TRAIN WITH PURPOSE.</h2>
+      </div>
+
+      <div class="training-layout">
+        <!-- Vertical Tab Selectors -->
+        <div class="training-tabs">
+          <button class="training-tab active" data-program="strength">
+            <span class="training-tab-title">STRENGTH TRAINING</span>
+            <span class="training-tab-arrow">&rarr;</span>
+          </button>
+          <button class="training-tab" data-program="functional">
+            <span class="training-tab-title">FUNCTIONAL TRAINING</span>
+            <span class="training-tab-arrow">&rarr;</span>
+          </button>
+          <button class="training-tab" data-program="cardio">
+            <span class="training-tab-title">CARDIO ENDURANCE</span>
+            <span class="training-tab-arrow">&rarr;</span>
+          </button>
+          <button class="training-tab" data-program="weight">
+            <span class="training-tab-title">WEIGHT TRAINING</span>
+            <span class="training-tab-arrow">&rarr;</span>
+          </button>
+          <button class="training-tab" data-program="personal">
+            <span class="training-tab-title">PERSONAL TRAINING</span>
+            <span class="training-tab-arrow">&rarr;</span>
+          </button>
+          <button class="training-tab" data-program="fatloss">
+            <span class="training-tab-title">FAT LOSS & SHRED</span>
+            <span class="training-tab-arrow">&rarr;</span>
+          </button>
+          <button class="training-tab" data-program="muscle">
+            <span class="training-tab-title">MUSCLE BUILDING</span>
+            <span class="training-tab-arrow">&rarr;</span>
+          </button>
+        </div>
+
+        <!-- Active Program Showcase Panel -->
+        <div class="training-display-panel">
+          <img id="programImg" class="training-display-img" src="./images/hero_athlete.jpg" alt="Training Program Preview">
+          
+          <div class="training-display-content">
+            <div>
+              <h3 id="programName" class="training-program-name">STRENGTH TRAINING</h3>
+              <p id="programDesc" class="training-program-desc">
+                Progressive overload, powerlifting racks, and custom weight plates designed for maximum raw strength development and neuromuscular adaptations.
+              </p>
+            </div>
+
+            <div class="training-meta-list">
+              <div class="meta-pill">LEVEL: <span>ALL LEVELS</span></div>
+              <div class="meta-pill">INTENSITY: <span>HIGH</span></div>
+              <div class="meta-pill">FOCUS: <span>POWER & HYPERTROPHY</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. INTERACTIVE BMI CALCULATOR -->
+  <section id="bmi" class="bmi-section">
+    <div class="container bmi-grid">
+      
+      <div class="bmi-info-box">
+        <div class="tech-badge">
+          <span class="tech-dot"></span>
+          <span>BODY PERFORMANCE / MEASUREMENT</span>
+        </div>
+        <h2 class="section-title">KNOW YOUR NUMBERS.</h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Body Mass Index (BMI) is a foundational indicator of body composition and mass distribution. Calculate your score to align your fitness goals at Sky Fitness Gym.
+        </p>
+
+        <div style="margin-top: 20px; background-color: var(--bg-card); border: 1px solid var(--border-tech); padding: 24px;">
+          <h4 class="font-tech" style="color: var(--accent-green); margin-bottom: 8px;">STANDARD ADULT BMI CATEGORIES:</h4>
+          <ul style="color: var(--text-muted); font-size: 0.9rem; list-style-position: inside; display: flex; flex-direction: column; gap: 6px;">
+            <li><strong>Below 18.5:</strong> Underweight</li>
+            <li><strong>18.5 – 24.9:</strong> Normal Weight</li>
+            <li><strong>25.0 – 29.9:</strong> Overweight</li>
+            <li><strong>30.0+:</strong> Obesity</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Interactive Calculator Card -->
+      <div class="bmi-card">
+        <form id="bmiForm" class="bmi-form">
+          <div class="form-group">
+            <label class="form-label">SEX</label>
+            <div class="sex-selector">
+              <button type="button" class="sex-btn active" data-sex="male">MALE</button>
+              <button type="button" class="sex-btn" data-sex="female">FEMALE</button>
+            </div>
+            <input type="hidden" id="sexInput" value="male">
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label class="form-label" for="weightInput">WEIGHT</label>
+              <div class="form-input-wrapper">
+                <input type="number" id="weightInput" class="form-input" placeholder="70" min="20" max="300" step="0.1" required>
+                <span class="input-suffix">KG</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="heightInput">HEIGHT</label>
+              <div class="form-input-wrapper">
+                <input type="number" id="heightInput" class="form-input" placeholder="175" min="80" max="250" required>
+                <span class="input-suffix">CM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="ageInput">AGE</label>
+            <div class="form-input-wrapper">
+              <input type="number" id="ageInput" class="form-input" placeholder="25" min="10" max="100">
+              <span class="input-suffix">YRS</span>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 8px;">
+            <button type="submit" class="btn btn-primary" style="flex: 1;">CALCULATE BMI</button>
+            <button type="button" id="bmiResetBtn" class="btn btn-secondary">RESET</button>
+          </div>
+        </form>
+
+        <!-- Dynamic Animated Result Panel -->
+        <div id="bmiResultPanel" class="bmi-result-panel">
+          <div class="bmi-score-display">
+            <div>
+              <span style="font-family: var(--font-tech); font-size: 0.8rem; color: var(--text-muted); display: block;">YOUR CALCULATED BMI</span>
+              <span id="bmiScoreNum" class="bmi-score-num">--</span>
+            </div>
+            <span id="bmiCategoryBadge" class="bmi-category-badge">--</span>
+          </div>
+
+          <!-- Scale Bar Gauge -->
+          <div>
+            <div class="bmi-scale-bar">
+              <div id="bmiPin" class="bmi-pin"></div>
+            </div>
+            <div class="bmi-scale-labels">
+              <span>Underweight</span>
+              <span>Normal</span>
+              <span>Overweight</span>
+              <span>Obese</span>
+            </div>
+          </div>
+
+          <p class="bmi-disclaimer">
+            *BMI is a general screening measure and does not account for individual muscle mass, bone density, body composition, or medical health status. Consult our trainers for personalized evaluation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. WHY SKY FITNESS -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="tech-badge" style="margin-bottom: 16px;">
+          <span class="tech-dot"></span>
+          <span>CORE ETHOS</span>
+        </div>
+        <h2 class="section-title">WHY SKY FITNESS?</h2>
+      </div>
+
+      <div class="principles-list">
+        <div class="principle-row">
+          <div class="principle-left">
+            <span class="principle-num">01</span>
+            <span class="principle-title">DISCIPLINE</span>
+          </div>
+          <p class="principle-desc">Consistency over motivation. We build habits that endure long after initial enthusiasm fades.</p>
+        </div>
+
+        <div class="principle-row">
+          <div class="principle-left">
+            <span class="principle-num">02</span>
+            <span class="principle-title">STRENGTH</span>
+          </div>
+          <p class="principle-desc">Progressive heavy lifting equipment built to handle continuous overload and heavy iron work.</p>
+        </div>
+
+        <div class="principle-row">
+          <div class="principle-left">
+            <span class="principle-num">03</span>
+            <span class="principle-title">CONSISTENCY</span>
+          </div>
+          <p class="principle-desc">Daily effort multiplied over weeks and months creates unstoppable physical progress.</p>
+        </div>
+
+        <div class="principle-row">
+          <div class="principle-left">
+            <span class="principle-num">04</span>
+            <span class="principle-title">PERFORMANCE</span>
+          </div>
+          <p class="principle-desc">Optimizing functional power, agility, metabolic capacity, and endurance across all age groups.</p>
+        </div>
+
+        <div class="principle-row">
+          <div class="principle-left">
+            <span class="principle-num">05</span>
+            <span class="principle-title">PROGRESS</span>
+          </div>
+          <p class="principle-desc">Measurable improvements in personal records, body composition, and overall physical vitality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FACILITIES / AMENITIES -->
+  <section id="facilities" class="facilities-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="tech-badge" style="margin-bottom: 16px;">
+          <span class="tech-dot"></span>
+          <span>OUR ENVIRONMENT</span>
+        </div>
+        <h2 class="section-title">BUILT FOR THE WORK.</h2>
+      </div>
+
+      <div class="facilities-grid">
+        <div class="facility-card">
+          <img src="./images/facilities_gym.jpg" alt="Strength Training Area">
+          <div class="facility-content">
+            <span class="facility-tag">01 &bull; HEAVY IRON</span>
+            <h3 class="facility-title">STRENGTH AREA</h3>
+          </div>
+        </div>
+
+        <div class="facility-card">
+          <img src="./images/facilities_gym.jpg" alt="Cardio & Endurance Zone">
+          <div class="facility-content">
+            <span class="facility-tag">02 &bull; ENDURANCE</span>
+            <h3 class="facility-title">CARDIO ZONE</h3>
+          </div>
+        </div>
+
+        <div class="facility-card">
+          <img src="./images/hero_athlete.jpg" alt="Free Weights Station">
+          <div class="facility-content">
+            <span class="facility-tag">03 &bull; DUMBBELLS & BARS</span>
+            <h3 class="facility-title">FREE WEIGHTS</h3>
+          </div>
+        </div>
+
+        <div class="facility-card">
+          <img src="./images/facilities_gym.jpg" alt="Functional Turf Area">
+          <div class="facility-content">
+            <span class="facility-tag">04 &bull; TURF & SLEDS</span>
+            <h3 class="facility-title">FUNCTIONAL TURF</h3>
+          </div>
+        </div>
+
+        <div class="facility-card">
+          <img src="./images/hero_athlete.jpg" alt="Main Workout Floor">
+          <div class="facility-content">
+            <span class="facility-tag">05 &bull; SPACIOUS FLOOR</span>
+            <h3 class="facility-title">TRAINING FLOOR</h3>
+          </div>
+        </div>
+
+        <div class="facility-card">
+          <img src="./images/trainer_coach.jpg" alt="Mobility & Recovery Area">
+          <div class="facility-content">
+            <span class="facility-tag">06 &bull; RECOVERY</span>
+            <h3 class="facility-title">MOBILITY & RECOVERY</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. COACHES / TRAINERS -->
+  <section id="trainers" class="trainers-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="tech-badge" style="margin-bottom: 16px;">
+          <span class="tech-dot"></span>
+          <span>EXPERT GUIDANCE</span>
+        </div>
+        <h2 class="section-title">MEET YOUR COACHES.</h2>
+      </div>
+
+      <div class="trainers-grid">
+        <div class="trainer-card">
+          <div class="trainer-img-wrap">
+            <img src="./images/trainer_coach.jpg" alt="Head Fitness Trainer">
+          </div>
+          <div class="trainer-info">
+            <p class="trainer-role">HEAD COACH &bull; STRENGTH & CONDITIONING</p>
+            <h3 class="trainer-name">HEAD COACH</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">Specialized in compound movement mechanics, hypertrophy programming, and athletic transformation.</p>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <div class="trainer-img-wrap">
+            <img src="./images/hero_athlete.jpg" alt="Functional Training Specialist">
+          </div>
+          <div class="trainer-info">
+            <p class="trainer-role">FUNCTIONAL & MOBILITY COACH</p>
+            <h3 class="trainer-name">PERSONAL TRAINER</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">Expert in metabolic conditioning, agility, bodyweight progression, and fat loss strategy.</p>
+          </div>
+        </div>
+
+        <div class="trainer-card">
+          <div class="trainer-img-wrap">
+            <img src="./images/facilities_gym.jpg" alt="Weight Loss Coach">
+          </div>
+          <div class="trainer-info">
+            <p class="trainer-role">WEIGHT LOSS & NUTRITION COACH</p>
+            <h3 class="trainer-name">FITNESS INSTRUCTOR</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">Focuses on custom dietary guidance, cardiovascular endurance, and habit tracking.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. MEMBER EXPERIENCE / TESTIMONIAL DEMO -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="tech-badge" style="margin-bottom: 16px;">
+          <span class="tech-dot"></span>
+          <span>SOCIAL PROOF</span>
+        </div>
+        <h2 class="section-title">THE WORK SPEAKS.</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <p class="review-quote">
+            "The equipment standard and gym culture at Sky Fitness is top tier. The trainers actually focus on correct form and lifting safety."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">SF</div>
+            <div>
+              <h4 class="review-name">LOCAL MEMBER</h4>
+              <p class="review-goal">Strength & Conditioning &bull; Dasanapura</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p class="review-quote">
+            "Spacious training floor with great free weight machinery. Best place in Alur Main Road for consistent morning workouts."
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">SF</div>
+            <div>
+              <h4 class="review-name">REGULAR MEMBER</h4>
+              <p class="review-goal">Weight Loss & Fitness &bull; Hobli</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <p class="review-quote">
+            "Clean atmosphere, motivating energy, and high quality dumbbells and squat racks. Highly recommend visiting!"
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">SF</div>
+            <div>
+              <h4 class="review-name">FITNESS ENTHUSIAST</h4>
+              <p class="review-goal">Muscle Building &bull; Bengaluru</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. LOCATION & CONTACT -->
+  <section id="location" class="location-section">
+    <div class="container location-grid">
+      <div class="location-info-box">
+        <div class="tech-badge">
+          <span class="tech-dot"></span>
+          <span>VISIT OUR GYM</span>
+        </div>
+        <h2 class="section-title">FIND YOUR TRAINING GROUND.</h2>
+
+        <div class="address-block">
+          <h3 class="address-title">SKY FITNESS GYM</h3>
+          <p class="address-text">
+            1st Floor, Tamara Complex,<br>
+            5/4, Alur Main Road,<br>
+            Opposite to Primary Health Centre,<br>
+            Hobli, Dasanapura,<br>
+            Bengaluru, Karnataka 562162
+          </p>
+
+          <div class="contact-links-list">
+            <a href="tel:+919632727612" class="contact-link-item">
+              <div class="contact-icon">📞</div>
+              <span>096327 27612</span>
+            </a>
+            <a href="https://wa.me/919632727612?text=Hi%20Sky%20Fitness%20Gym%2C%20I%20want%20to%20enquire%20about%20membership." target="_blank" rel="noopener" class="contact-link-item">
+              <div class="contact-icon">💬</div>
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+
+          <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://maps.google.com/?q=1st+Floor+Tamara+Complex+5/4+Alur+Main+Road+Dasanapura+Bengaluru+562162" target="_blank" rel="noopener" class="btn btn-primary">GET DIRECTIONS</a>
+            <a href="tel:+919632727612" class="btn btn-secondary">CALL NOW</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Dark Map Graphic Box -->
+      <div class="map-container">
+        <div class="map-bg-graphics"></div>
+        <div class="map-card-center">
+          <div class="tech-dot" style="margin: 0 auto 12px auto; width: 12px; height: 12px;"></div>
+          <h3 class="font-heading" style="font-size: 2.2rem; color: #fff;">DASANAPURA, BENGALURU</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">Opposite Primary Health Centre, Alur Main Road</p>
+          <a href="https://maps.google.com/?q=1st+Floor+Tamara+Complex+5/4+Alur+Main+Road+Dasanapura+Bengaluru+562162" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 20px; font-size: 0.8rem;">OPEN IN GOOGLE MAPS &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FINAL CTA -->
+  <section class="final-cta-section bg-grid-pattern">
+    <div class="container">
+      <div class="tech-badge" style="margin-bottom: 24px;">
+        <span class="tech-dot"></span>
+        <span>NO MORE DELAYS</span>
+      </div>
+      <h2 class="cta-title">
+        READY<br>
+        TO PUT IN<br>
+        <span class="text-accent">THE WORK?</span>
+      </h2>
+
+      <div class="cta-buttons">
+        <a href="tel:+919632727612" class="btn btn-primary">JOIN SKY FITNESS</a>
+        <a href="https://wa.me/919632727612" target="_blank" rel="noopener" class="btn btn-secondary">WHATSAPP ENQUIRY</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#home" class="nav-brand">
+            <div class="nav-logo-icon">S</div>
+            <div class="nav-brand-text">SKY <span>FITNESS</span></div>
+          </a>
+          <p class="footer-brand-desc">
+            Premium fitness and strength gym facility located in Dasanapura, Bengaluru. Equipped for progress and athletic performance.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#training" class="footer-link">Training Programs</a></li>
+            <li><a href="#bmi" class="footer-link">BMI Calculator</a></li>
+            <li><a href="#facilities" class="footer-link">Facilities</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">CONTACT INFO</h4>
+          <ul class="footer-links">
+            <li style="color: var(--text-muted);">1st Floor, Tamara Complex, Alur Main Road, Dasanapura, Bengaluru 562162</li>
+            <li><a href="tel:+919632727612" class="footer-link">Phone: 096327 27612</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 SKY FITNESS GYM. All rights reserved.</p>
+        <p class="footer-tagline">TRAIN HARD. STAY CONSISTENT.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky Action Bar for Mobile Viewports -->
+  <div class="floating-mobile-bar">
+    <a href="tel:+919632727612" class="btn btn-primary mobile-action-btn">📞 CALL NOW</a>
+    <a href="https://wa.me/919632727612" target="_blank" rel="noopener" class="btn btn-secondary mobile-action-btn" style="border-color: var(--accent-green); color: var(--accent-green);">💬 WHATSAPP</a>
+  </div>
+
+  <!-- JavaScript App Script -->
+  <script src="./app.js"></script>
+</body>
+</html>
