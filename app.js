@@ -1,4 +1,4 @@
-// SKY FITNESS GYM - INTERACTIVE FRONTEND ENGINE
+// SKY FITNESS GYM - INTERACTIVE FRONTEND ENGINE WITH REAL CLIENT PHOTOS
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMobileMenu();
@@ -65,7 +65,7 @@ function initMobileMenu() {
   });
 }
 
-/* 3. Training Programs Interactive Tab Swapper */
+/* 3. Training Programs Interactive Tab Swapper with Real Client Photos */
 function initTrainingTabs() {
   const tabs = document.querySelectorAll('.training-tab');
   const programName = document.getElementById('programName');
@@ -75,38 +75,38 @@ function initTrainingTabs() {
   const programData = {
     strength: {
       name: "STRENGTH TRAINING",
-      desc: "Progressive overload, powerlifting racks, and custom weight plates designed for maximum raw strength development and neuromuscular adaptations.",
-      img: "./images/hero_athlete.jpg"
+      desc: "Progressive overload, powerlifting racks, hex bars, and heavy bumper plates designed for maximum raw strength development and neuromuscular adaptations.",
+      img: "./images/real_squat_rack.jpg"
     },
     functional: {
       name: "FUNCTIONAL TRAINING",
-      desc: "High-intensity athletic movement, kettlebells, battle ropes, and sled pushes to optimize real-world stamina, agility, and core stability.",
-      img: "./images/facilities_gym.jpg"
+      desc: "High-intensity athletic movement, cable stations, battle ropes, and sled pushes on our open gym floor to optimize real-world stamina.",
+      img: "./images/real_gym_machines.jpg"
     },
     cardio: {
       name: "CARDIO ENDURANCE",
-      desc: "Premium curved treadmills, rowing machines, and air bikes engineered for heart rate zone conditioning and fat burning efficiency.",
-      img: "./images/facilities_gym.jpg"
+      desc: "Commercial Aerofit treadmills, ellipticals, and cross-trainers engineered for heart rate zone conditioning and fat burning efficiency.",
+      img: "./images/real_cardio_treadmills.jpg"
     },
     weight: {
       name: "WEIGHT TRAINING",
-      desc: "Hypertrophy-focused dumbbell racks up to 50kg, isolation machinery, and ergonomic bench setups for muscle sculpting.",
-      img: "./images/hero_athlete.jpg"
+      desc: "Heavy dumbbell racks, incline & flat benches, isolation machinery, and barbell stations for targeted muscle sculpting.",
+      img: "./images/real_dumbbells.jpg"
     },
     personal: {
       name: "PERSONAL TRAINING",
-      desc: "1-on-1 dedicated coaching, posture correction, personalized nutrition strategy, and structured milestone tracking.",
-      img: "./images/trainer_coach.jpg"
+      desc: "1-on-1 dedicated coaching, posture correction, personalized nutrition strategy, and structured milestone tracking on the gym floor.",
+      img: "./images/real_floor_wide.jpg"
     },
     fatloss: {
       name: "FAT LOSS & SHRED",
       desc: "Caloric expenditure optimization workouts combining metabolic conditioning with resistance circuits for lasting body composition change.",
-      img: "./images/facilities_gym.jpg"
+      img: "./images/real_cardio_ellipticals.jpg"
     },
     muscle: {
       name: "MUSCLE BUILDING",
       desc: "Hypertrophy protocols targeting mechanical tension and volume to construct dense athletic physique with expert form guidance.",
-      img: "./images/hero_athlete.jpg"
+      img: "./images/real_squat_rack.jpg"
     }
   };
 

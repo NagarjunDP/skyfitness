@@ -199,23 +199,18 @@ body {
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   color: var(--text-main);
 }
 
-.nav-logo-icon {
-  width: 36px;
-  height: 36px;
-  background-color: var(--accent-green);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-weight: 900;
-  color: #000;
-  font-size: 1.4rem;
+.nav-logo-img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-green);
+  box-shadow: 0 0 12px rgba(0, 255, 102, 0.35);
 }
 
 .nav-brand-text {
