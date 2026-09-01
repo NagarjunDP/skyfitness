@@ -40,7 +40,7 @@ function initNavbar() {
   });
 }
 
-/* 2. Fullscreen Mobile Drawer */
+/* 2. Fullscreen Mobile Drawer Menu Toggle */
 function initMobileMenu() {
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -48,19 +48,33 @@ function initMobileMenu() {
 
   if (!hamburgerBtn || !mobileMenu) return;
 
-  function toggleMenu() {
-    hamburgerBtn.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  function toggleMenu(e) {
+    if (e) e.stopPropagation();
+    const isOpen = mobileMenu.classList.contains('open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
+  function openMenu() {
+    hamburgerBtn.classList.add('open');
+    mobileMenu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    hamburgerBtn.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
   }
 
   hamburgerBtn.addEventListener('click', toggleMenu);
 
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (mobileMenu.classList.contains('open')) {
-        toggleMenu();
-      }
+      closeMenu();
     });
   });
 }
