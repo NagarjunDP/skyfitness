@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initTrainingTabs();
   initBMICalculator();
+  initPricingTabs();
   initScrollAnimations();
 });
 
@@ -348,3 +349,44 @@ function initScrollAnimations() {
     observer.observe(el);
   });
 }
+
+/* 7. Dual Pricing Switcher & PT Duration Filters */
+function initPricingTabs() {
+  const tabBtns = document.querySelectorAll('.pricing-tab-btn');
+  const panels = document.querySelectorAll('.pricing-panel');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      
+      tabBtns.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add('active');
+      }
+    });
+  });
+
+  // PT Duration Sub-filters
+  const ptFilterBtns = document.querySelectorAll('.pt-filter-btn');
+  const ptGroups = document.querySelectorAll('.pt-duration-group');
+
+  ptFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const durationId = btn.getAttribute('data-pt-duration');
+
+      ptFilterBtns.forEach(b => b.classList.remove('active'));
+      ptGroups.forEach(g => g.classList.remove('active'));
+
+      btn.classList.add('active');
+      const targetGroup = document.getElementById(durationId);
+      if (targetGroup) {
+        targetGroup.classList.add('active');
+      }
+    });
+  });
+}
+
