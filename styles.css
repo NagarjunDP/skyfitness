@@ -1152,8 +1152,8 @@ body {
 .trainer-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center top;
   filter: contrast(1.05) brightness(1.02);
   transition: transform var(--transition-medium);
 }
@@ -1646,8 +1646,8 @@ body {
 .founder-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center top;
   filter: contrast(1.05) brightness(1.02);
   transition: transform var(--transition-medium);
 }
@@ -1703,6 +1703,38 @@ body {
   font-size: 0.95rem;
   line-height: 1.6;
   margin-top: 14px;
+}
+
+.founder-stats-row {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: rgba(0, 255, 102, 0.04);
+  border-left: 3px solid var(--accent-green);
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+
+.founder-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-stat-item .stat-number {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--accent-green-bright);
+  line-height: 1;
+}
+
+.founder-stat-item .stat-label {
+  font-family: var(--font-tech);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
 }
 
 .certifications-box {
