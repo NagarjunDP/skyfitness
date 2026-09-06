@@ -42,6 +42,11 @@
       </ul>
 
       <div class="nav-actions">
+        <div class="theme-switcher-group" id="themeSwitcher">
+          <button class="theme-btn active" data-theme-btn="gold" title="Royal Obsidian & Gold">👑 Gold</button>
+          <button class="theme-btn" data-theme-btn="mint" title="Titanium Cyber Mint">⚡ Mint</button>
+          <button class="theme-btn" data-theme-btn="crimson" title="Crimson Onyx & Amber">🔥 Crimson</button>
+        </div>
         <a href="tel:+919632727612" class="btn btn-primary nav-join-btn">JOIN NOW</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
           <div class="hamburger-line"></div>
@@ -54,6 +59,15 @@
 
   <!-- Fullscreen Mobile Navigation Overlay Drawer -->
   <div class="mobile-menu-overlay" id="mobileMenu">
+    <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-family: var(--font-tech); font-size: 0.8rem; color: var(--text-muted);">SELECT LUXURY THEME:</span>
+      <div class="theme-switcher-group" id="mobileThemeSwitcher">
+        <button class="theme-btn active" data-theme-btn="gold">👑 Gold</button>
+        <button class="theme-btn" data-theme-btn="mint">⚡ Mint</button>
+        <button class="theme-btn" data-theme-btn="crimson">🔥 Crimson</button>
+      </div>
+    </div>
+
     <ul class="mobile-nav-links">
       <li><a href="#home" class="mobile-nav-link">HOME</a></li>
       <li><a href="#about" class="mobile-nav-link">ABOUT SKY</a></li>
@@ -123,12 +137,12 @@
                 <path d="M0 250L250 500H150L0 350V250Z" fill="url(#greenGrad1)" opacity="0.75"/>
                 <defs>
                   <linearGradient id="greenGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#00FF66"/>
-                    <stop offset="100%" stop-color="#008033"/>
+                    <stop offset="0%" stop-color="var(--accent-green-bright)"/>
+                    <stop offset="100%" stop-color="var(--accent-green)"/>
                   </linearGradient>
                   <linearGradient id="greenGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#00E656"/>
-                    <stop offset="100%" stop-color="#004D1F"/>
+                    <stop offset="0%" stop-color="var(--accent-green)"/>
+                    <stop offset="100%" stop-color="var(--accent-glow)"/>
                   </linearGradient>
                 </defs>
               </svg>

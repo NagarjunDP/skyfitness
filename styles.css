@@ -1,18 +1,28 @@
-/* SKY FITNESS GYM - ATHLETIC STYLESHEET (EXACT TYGO FITNESS REPLICA & MOBILE OPTIMIZED) */
+/* SKY FITNESS GYM - ULTRA LUXURY ATHLETIC STYLESHEET */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800;900&display=swap');
 
 :root {
-  --bg-dark: #040605;
-  --bg-card: #0a0e0b;
-  --bg-card-hover: #101612;
+  --bg-dark: #07090e;
+  --bg-card: rgba(18, 22, 31, 0.75);
+  --bg-card-hover: rgba(26, 32, 44, 0.9);
   --text-main: #ffffff;
   --text-muted: #a1a1aa;
-  --text-dim: #52525b;
-  --accent-green: #00ff66;
-  --accent-green-bright: #00e656;
-  --accent-green-glow: rgba(0, 255, 102, 0.35);
+  --text-dim: #64748b;
+  
+  --accent-gold: #e5c158;
+  --accent-gold-bright: #ffe58f;
+  --accent-gold-glow: rgba(229, 193, 88, 0.35);
+  
+  --accent-green: #e5c158;
+  --accent-green-bright: #ffe58f;
+  --accent-green-glow: rgba(229, 193, 88, 0.35);
   --border-tech: rgba(255, 255, 255, 0.1);
-  --border-green: rgba(0, 255, 102, 0.35);
+  --border-green: rgba(229, 193, 88, 0.35);
+  --border-accent: rgba(229, 193, 88, 0.35);
+  
+  --accent-gradient: linear-gradient(135deg, #ffe58f 0%, #d4af37 50%, #00f090 100%);
+  --accent-gradient-text: linear-gradient(135deg, #ffffff 30%, #ffe58f 70%, #d4af37 100%);
+  --accent-glow: rgba(229, 193, 88, 0.35);
   
   --font-heading: 'Bebas Neue', sans-serif;
   --font-subheading: 'Syne', sans-serif;
@@ -21,6 +31,51 @@
 
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-medium: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Theme 1: Royal Obsidian & Champagne Gold (Default Luxury Masterpiece) */
+[data-theme="gold"], html:not([data-theme]) {
+  --bg-dark: #07090e;
+  --bg-card: rgba(18, 22, 31, 0.75);
+  --bg-card-hover: rgba(26, 32, 44, 0.9);
+  --accent-green: #e5c158;
+  --accent-green-bright: #ffe58f;
+  --accent-green-glow: rgba(229, 193, 88, 0.35);
+  --border-green: rgba(229, 193, 88, 0.35);
+  --border-accent: rgba(229, 193, 88, 0.35);
+  --accent-gradient: linear-gradient(135deg, #ffe58f 0%, #d4af37 50%, #00f090 100%);
+  --accent-gradient-text: linear-gradient(135deg, #ffffff 30%, #ffe58f 70%, #d4af37 100%);
+  --accent-glow: rgba(229, 193, 88, 0.35);
+}
+
+/* Theme 2: Titanium Mint & Cyber Sapphire */
+[data-theme="mint"] {
+  --bg-dark: #030806;
+  --bg-card: rgba(10, 24, 18, 0.75);
+  --bg-card-hover: rgba(16, 38, 28, 0.9);
+  --accent-green: #00f090;
+  --accent-green-bright: #60efff;
+  --accent-green-glow: rgba(0, 240, 144, 0.35);
+  --border-green: rgba(0, 240, 144, 0.35);
+  --border-accent: rgba(0, 240, 144, 0.35);
+  --accent-gradient: linear-gradient(135deg, #60efff 0%, #00f090 60%, #00b894 100%);
+  --accent-gradient-text: linear-gradient(135deg, #ffffff 30%, #60efff 70%, #00f090 100%);
+  --accent-glow: rgba(0, 240, 144, 0.35);
+}
+
+/* Theme 3: Crimson Onyx & Titanium Amber */
+[data-theme="crimson"] {
+  --bg-dark: #0c0507;
+  --bg-card: rgba(26, 12, 16, 0.75);
+  --bg-card-hover: rgba(40, 18, 24, 0.9);
+  --accent-green: #ff3366;
+  --accent-green-bright: #ff6b8b;
+  --accent-green-glow: rgba(255, 51, 102, 0.35);
+  --border-green: rgba(255, 51, 102, 0.35);
+  --border-accent: rgba(255, 51, 102, 0.35);
+  --accent-gradient: linear-gradient(135deg, #ff6b8b 0%, #ff3366 60%, #e60039 100%);
+  --accent-gradient-text: linear-gradient(135deg, #ffffff 30%, #ff6b8b 70%, #ff3366 100%);
+  --accent-glow: rgba(255, 51, 102, 0.35);
 }
 
 /* Reset & Base Setup */
@@ -38,6 +93,7 @@ html {
   font-family: var(--font-body);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body {
@@ -46,6 +102,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+  transition: background-color 0.4s ease;
 }
 
 /* Typography Utilities */
@@ -56,12 +113,23 @@ body {
 .text-accent-bright { color: var(--accent-green-bright); }
 .text-muted { color: var(--text-muted); }
 
-/* Grid Background */
+/* Luxury Metallic Gradient Text Utilities */
+.text-gradient-gold, .text-gradient-accent {
+  background: var(--accent-gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Luxury Ambient Glow Background */
 .bg-grid-pattern {
+  background-color: var(--bg-dark);
   background-image: 
-    linear-gradient(to right, rgba(0, 255, 102, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 255, 102, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
+    radial-gradient(circle at 15% 15%, var(--accent-glow) 0%, transparent 40%),
+    radial-gradient(circle at 85% 65%, rgba(229, 193, 88, 0.06) 0%, transparent 45%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
 }
 
 /* Container */
@@ -80,7 +148,7 @@ body {
   .container { padding: 0 60px; }
 }
 
-/* Buttons */
+/* Luxury Shimmer Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -96,38 +164,51 @@ body {
   border: none;
   cursor: pointer;
   position: relative;
+  border-radius: 4px;
+  overflow: hidden;
   transition: all var(--transition-fast);
 }
 
-.btn-tygo-green {
-  background-color: var(--accent-green-bright);
+.btn-tygo-green, .btn-primary {
+  background: var(--accent-gradient);
   color: #000000;
   font-weight: 800;
-  box-shadow: 0 0 25px rgba(0, 255, 102, 0.4);
+  box-shadow: 0 4px 25px var(--accent-glow);
 }
 
-.btn-tygo-green:hover {
-  background-color: #00ff66;
-  transform: translateY(-2px);
-  box-shadow: 0 0 35px rgba(0, 255, 102, 0.65);
+.btn-tygo-green::before, .btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transition: 0.5s;
 }
 
-.btn-primary {
-  background-color: var(--accent-green);
-  color: #000000;
-  font-weight: 800;
+.btn-tygo-green:hover::before, .btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-tygo-green:hover, .btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 35px var(--accent-glow);
+  filter: brightness(1.1);
 }
 
 .btn-secondary {
-  background-color: rgba(10, 14, 11, 0.8);
+  background-color: rgba(18, 22, 31, 0.7);
+  backdrop-filter: blur(12px);
   color: var(--text-main);
-  border: 1px solid var(--border-green);
+  border: 1px solid var(--border-accent);
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent-green);
-  color: var(--accent-green);
-  background-color: rgba(0, 255, 102, 0.12);
+  border-color: var(--accent-green-bright);
+  color: var(--accent-green-bright);
+  background-color: rgba(229, 193, 88, 0.12);
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
 /* Technical Badges */
@@ -135,15 +216,18 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
-  background-color: rgba(0, 255, 102, 0.12);
-  border: 1px solid var(--border-green);
+  padding: 6px 16px;
+  background: rgba(18, 22, 31, 0.8);
+  border: 1px solid var(--border-accent);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
   font-family: var(--font-tech);
   font-size: 0.75rem;
   letter-spacing: 0.15em;
-  color: var(--accent-green);
+  color: var(--accent-green-bright);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .tech-dot {
@@ -151,7 +235,45 @@ body {
   height: 6px;
   background-color: var(--accent-green);
   border-radius: 50%;
-  box-shadow: 0 0 8px var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+}
+
+/* Luxury Theme Switcher Pill */
+.theme-switcher-group {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-tech);
+  border-radius: 30px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.theme-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-tech);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all var(--transition-fast);
+}
+
+.theme-btn.active {
+  background: var(--accent-gradient);
+  color: #000000;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.theme-btn:hover:not(.active) {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* ==========================================================================
@@ -164,15 +286,17 @@ body {
   width: 100%;
   z-index: 2000;
   padding: 16px 0;
-  background-color: rgba(4, 6, 5, 0.88);
-  backdrop-filter: blur(12px);
+  background-color: rgba(7, 9, 14, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar.scrolled {
   padding: 12px 0;
-  background-color: rgba(4, 6, 5, 0.96);
-  border-bottom-color: var(--border-green);
+  background-color: rgba(7, 9, 14, 0.95);
+  border-bottom-color: var(--border-accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-container {
@@ -240,7 +364,7 @@ body {
 .nav-menu {
   display: none;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   list-style: none;
 }
 
@@ -248,10 +372,14 @@ body {
   .nav-menu { display: flex; }
 }
 
+@media (min-width: 1360px) {
+  .nav-menu { gap: 18px; }
+}
+
 .nav-link {
   font-family: var(--font-tech);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
@@ -259,6 +387,7 @@ body {
   position: relative;
   transition: color var(--transition-fast);
   padding: 4px 0;
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -283,12 +412,43 @@ body {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Hide header theme switcher on mobile & tablet, show in fullscreen mobile drawer instead */
+@media (max-width: 1079px) {
+  .nav-actions #themeSwitcher {
+    display: none !important;
+  }
 }
 
 .nav-join-btn {
   padding: 8px 16px;
   font-size: 0.8rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+  .logo-box {
+    padding: 3px 8px;
+    gap: 6px;
+  }
+  .nav-brand-text {
+    font-size: 1.2rem;
+  }
+  .nav-brand-subtext {
+    display: none;
+  }
+  .nav-join-btn {
+    padding: 6px 10px;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+  .nav-actions {
+    gap: 6px;
+  }
 }
 
 /* Hamburger */
@@ -712,10 +872,13 @@ body {
 
 .bmi-card {
   background-color: var(--bg-card);
-  border: 1px solid var(--border-green);
-  padding: 32px;
+  border: 1px solid var(--border-accent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 12px;
+  padding: 36px;
   position: relative;
-  box-shadow: 0 0 25px rgba(0, 255, 102, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--accent-glow);
 }
 
 .bmi-form {
@@ -968,13 +1131,17 @@ body {
 
 .training-display-panel {
   background-color: var(--bg-card);
-  border: 1px solid var(--border-green);
+  border: 1px solid var(--border-accent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 12px;
   position: relative;
   overflow: hidden;
   min-height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
 .training-display-img {
@@ -991,7 +1158,7 @@ body {
   position: relative;
   z-index: 10;
   padding: 32px;
-  background: linear-gradient(to top, rgba(4, 6, 5, 0.98) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(7, 9, 14, 0.98) 0%, transparent 100%);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1000,7 +1167,7 @@ body {
 .training-program-name {
   font-family: var(--font-heading);
   font-size: 2.4rem;
-  color: var(--accent-green);
+  color: var(--accent-green-bright);
   line-height: 1;
 }
 
@@ -1016,15 +1183,17 @@ body {
 }
 
 .meta-pill {
-  padding: 4px 12px;
-  background-color: rgba(0, 255, 102, 0.1);
-  border: 1px solid var(--border-green);
+  padding: 6px 14px;
+  background-color: rgba(18, 22, 31, 0.7);
+  border: 1px solid var(--border-accent);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
   font-family: var(--font-tech);
   font-size: 0.75rem;
   color: var(--text-muted);
 }
 
-.meta-pill span { color: var(--accent-green); font-weight: 700; }
+.meta-pill span { color: var(--accent-green-bright); font-weight: 700; }
 
 .principles-list {
   display: flex;
@@ -1076,7 +1245,7 @@ body {
 .facilities-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 24px;
   margin-top: 40px;
 }
 
@@ -1085,7 +1254,15 @@ body {
   height: 340px;
   background-color: var(--bg-card);
   border: 1px solid var(--border-tech);
+  border-radius: 12px;
   overflow: hidden;
+  transition: all var(--transition-medium);
+}
+
+.facility-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 0 25px var(--accent-glow);
+  transform: translateY(-6px);
 }
 
 .facility-card img {
@@ -1097,7 +1274,7 @@ body {
 }
 
 .facility-card:hover img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 .facility-content {
@@ -1105,14 +1282,14 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
-  background: linear-gradient(to top, rgba(4, 6, 5, 0.95) 0%, transparent 100%);
+  padding: 24px;
+  background: linear-gradient(to top, rgba(7, 9, 14, 0.96) 0%, transparent 100%);
 }
 
 .facility-tag {
   font-family: var(--font-tech);
   font-size: 0.75rem;
-  color: var(--accent-green);
+  color: var(--accent-green-bright);
   font-weight: 700;
 }
 
@@ -1133,19 +1310,23 @@ body {
 .trainer-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-tech);
+  border-radius: 12px;
   overflow: hidden;
-  transition: all var(--transition-fast);
+  backdrop-filter: blur(12px);
+  transition: all var(--transition-medium);
 }
 
 .trainer-card:hover {
-  border-color: var(--accent-green);
+  border-color: var(--border-accent);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 25px var(--accent-glow);
 }
 
 .trainer-img-wrap {
   width: 100%;
   height: 480px;
   overflow: hidden;
-  background: radial-gradient(circle at center, rgba(0, 255, 102, 0.1) 0%, #060907 80%);
+  background: radial-gradient(circle at center, var(--accent-glow) 0%, #060907 80%);
   position: relative;
 }
 
@@ -1158,14 +1339,18 @@ body {
   transition: transform var(--transition-medium);
 }
 
+.trainer-card:hover .trainer-img-wrap img {
+  transform: scale(1.05);
+}
+
 .trainer-info {
-  padding: 20px;
+  padding: 24px;
 }
 
 .trainer-role {
   font-family: var(--font-tech);
   font-size: 0.75rem;
-  color: var(--accent-green);
+  color: var(--accent-green-bright);
   font-weight: 700;
 }
 
@@ -1186,33 +1371,41 @@ body {
 .pricing-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-tech);
-  padding: 32px 24px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 12px;
+  padding: 36px 28px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all var(--transition-fast);
+  transition: all var(--transition-medium);
 }
 
 .pricing-card:hover {
-  border-color: var(--accent-green);
+  border-color: var(--border-accent);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 30px var(--accent-glow);
 }
 
 .pricing-card.featured {
   border: 2px solid var(--accent-green);
-  background-color: rgba(0, 255, 102, 0.04);
+  background-color: rgba(18, 22, 31, 0.85);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 35px var(--accent-glow);
 }
 
 .featured-badge {
   position: absolute;
-  top: -12px;
+  top: -14px;
   right: 20px;
-  background: var(--accent-green);
+  background: var(--accent-gradient);
   color: #000000;
   font-family: var(--font-tech);
   font-size: 0.7rem;
   font-weight: 800;
-  padding: 3px 10px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px var(--accent-glow);
 }
 
 .pricing-plan-name {
@@ -1229,7 +1422,9 @@ body {
 }
 
 .pricing-card.featured .price-val {
-  color: var(--accent-green);
+  background: var(--accent-gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .pricing-features {

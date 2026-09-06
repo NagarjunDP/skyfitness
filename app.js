@@ -1,5 +1,6 @@
 // SKY FITNESS GYM - INTERACTIVE FRONTEND ENGINE (TYGO FITNESS EDITION)
 document.addEventListener('DOMContentLoaded', () => {
+  initThemeSwitcher();
   initHeroSlider();
   initNavbar();
   initMobileMenu();
@@ -386,6 +387,37 @@ function initPricingTabs() {
       if (targetGroup) {
         targetGroup.classList.add('active');
       }
+    });
+  });
+}
+
+/* 8. Luxury Theme Switcher Engine */
+function initThemeSwitcher() {
+  const themeBtns = document.querySelectorAll('[data-theme-btn]');
+  const savedTheme = localStorage.getItem('skyfitness_theme') || 'gold';
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('skyfitness_theme', theme);
+
+    themeBtns.forEach(btn => {
+      if (btn.getAttribute('data-theme-btn') === theme) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+  // Set initial theme
+  setTheme(savedTheme);
+
+  // Attach event listeners to theme buttons
+  themeBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const selectedTheme = btn.getAttribute('data-theme-btn');
+      setTheme(selectedTheme);
     });
   });
 }
