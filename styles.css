@@ -195,13 +195,7 @@ body {
 
 /* Luxury Theme Switcher Pill */
 .theme-switcher-group {
-  display: inline-flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-tech);
-  border-radius: 30px;
-  padding: 3px;
-  gap: 2px;
+  display: none !important;
 }
 
 .theme-btn {
