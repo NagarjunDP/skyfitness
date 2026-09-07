@@ -1,28 +1,28 @@
 /* SKY FITNESS GYM - ULTRA LUXURY ATHLETIC STYLESHEET */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&family=Syne:wght@700;800;900&display=swap');
 
-:root {
-  --bg-dark: #07090e;
-  --bg-card: rgba(18, 22, 31, 0.75);
-  --bg-card-hover: rgba(26, 32, 44, 0.9);
+:root, html:not([data-theme]), [data-theme="mint"], [data-theme="gold"], [data-theme="crimson"] {
+  --bg-dark: #030806;
+  --bg-card: rgba(10, 24, 18, 0.75);
+  --bg-card-hover: rgba(16, 38, 28, 0.9);
   --text-main: #ffffff;
   --text-muted: #a1a1aa;
   --text-dim: #64748b;
   
-  --accent-gold: #e5c158;
-  --accent-gold-bright: #ffe58f;
-  --accent-gold-glow: rgba(229, 193, 88, 0.35);
+  --accent-gold: #00f090;
+  --accent-gold-bright: #60efff;
+  --accent-gold-glow: rgba(0, 240, 144, 0.35);
   
-  --accent-green: #e5c158;
-  --accent-green-bright: #ffe58f;
-  --accent-green-glow: rgba(229, 193, 88, 0.35);
+  --accent-green: #00f090;
+  --accent-green-bright: #60efff;
+  --accent-green-glow: rgba(0, 240, 144, 0.35);
   --border-tech: rgba(255, 255, 255, 0.1);
-  --border-green: rgba(229, 193, 88, 0.35);
-  --border-accent: rgba(229, 193, 88, 0.35);
+  --border-green: rgba(0, 240, 144, 0.35);
+  --border-accent: rgba(0, 240, 144, 0.35);
   
-  --accent-gradient: linear-gradient(135deg, #ffe58f 0%, #d4af37 50%, #00f090 100%);
-  --accent-gradient-text: linear-gradient(135deg, #ffffff 30%, #ffe58f 70%, #d4af37 100%);
-  --accent-glow: rgba(229, 193, 88, 0.35);
+  --accent-gradient: linear-gradient(135deg, #60efff 0%, #00f090 60%, #00b894 100%);
+  --accent-gradient-text: linear-gradient(135deg, #ffffff 30%, #60efff 70%, #00f090 100%);
+  --accent-glow: rgba(0, 240, 144, 0.35);
   
   --font-heading: 'Bebas Neue', sans-serif;
   --font-subheading: 'Syne', sans-serif;
@@ -31,51 +31,6 @@
 
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-medium: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Theme 1: Royal Obsidian & Champagne Gold (Default Luxury Masterpiece) */
-[data-theme="gold"], html:not([data-theme]) {
-  --bg-dark: #07090e;
-  --bg-card: rgba(18, 22, 31, 0.75);
-  --bg-card-hover: rgba(26, 32, 44, 0.9);
-  --accent-green: #e5c158;
-  --accent-green-bright: #ffe58f;
-  --accent-green-glow: rgba(229, 193, 88, 0.35);
-  --border-green: rgba(229, 193, 88, 0.35);
-  --border-accent: rgba(229, 193, 88, 0.35);
-  --accent-gradient: linear-gradient(135deg, #ffe58f 0%, #d4af37 50%, #00f090 100%);
-  --accent-gradient-text: linear-gradient(135deg, #ffffff 30%, #ffe58f 70%, #d4af37 100%);
-  --accent-glow: rgba(229, 193, 88, 0.35);
-}
-
-/* Theme 2: Titanium Mint & Cyber Sapphire */
-[data-theme="mint"] {
-  --bg-dark: #030806;
-  --bg-card: rgba(10, 24, 18, 0.75);
-  --bg-card-hover: rgba(16, 38, 28, 0.9);
-  --accent-green: #00f090;
-  --accent-green-bright: #60efff;
-  --accent-green-glow: rgba(0, 240, 144, 0.35);
-  --border-green: rgba(0, 240, 144, 0.35);
-  --border-accent: rgba(0, 240, 144, 0.35);
-  --accent-gradient: linear-gradient(135deg, #60efff 0%, #00f090 60%, #00b894 100%);
-  --accent-gradient-text: linear-gradient(135deg, #ffffff 30%, #60efff 70%, #00f090 100%);
-  --accent-glow: rgba(0, 240, 144, 0.35);
-}
-
-/* Theme 3: Crimson Onyx & Titanium Amber */
-[data-theme="crimson"] {
-  --bg-dark: #0c0507;
-  --bg-card: rgba(26, 12, 16, 0.75);
-  --bg-card-hover: rgba(40, 18, 24, 0.9);
-  --accent-green: #ff3366;
-  --accent-green-bright: #ff6b8b;
-  --accent-green-glow: rgba(255, 51, 102, 0.35);
-  --border-green: rgba(255, 51, 102, 0.35);
-  --border-accent: rgba(255, 51, 102, 0.35);
-  --accent-gradient: linear-gradient(135deg, #ff6b8b 0%, #ff3366 60%, #e60039 100%);
-  --accent-gradient-text: linear-gradient(135deg, #ffffff 30%, #ff6b8b 70%, #ff3366 100%);
-  --accent-glow: rgba(255, 51, 102, 0.35);
 }
 
 /* Reset & Base Setup */

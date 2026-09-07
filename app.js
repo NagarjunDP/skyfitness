@@ -201,6 +201,21 @@ function initTrainingTabs() {
       name: "MUSCLE BUILDING",
       desc: "Hypertrophy protocols targeting mechanical tension and volume to construct dense athletic physique with expert form guidance.",
       img: "./images/real_squat_rack.jpg"
+    },
+    zumba: {
+      name: "ZUMBA FITNESS CLASS",
+      desc: "High-energy aerobic dance workouts blending latin rhythms, cardiovascular endurance, and full-body caloric burning in a vibrant group setting.",
+      img: "./images/zumba_class.jpg"
+    },
+    yoga: {
+      name: "YOGA & FLEXIBILITY CLASS",
+      desc: "Mindful vinyasa flows, posture alignment, core balance, and deep muscle recovery sessions led by expert wellness instructors.",
+      img: "./images/yoga_class.jpg"
+    },
+    dance: {
+      name: "DANCE FITNESS CLASS",
+      desc: "Rhythmic cardio dance choreography combining athletic coordination, agility drills, and high-tempo musical beats for fun body toning.",
+      img: "./images/dance_class.jpg"
     }
   };
 
@@ -394,7 +409,7 @@ function initPricingTabs() {
 /* 8. Luxury Theme Switcher Engine */
 function initThemeSwitcher() {
   const themeBtns = document.querySelectorAll('[data-theme-btn]');
-  const savedTheme = localStorage.getItem('skyfitness_theme') || 'gold';
+  const savedTheme = localStorage.getItem('skyfitness_theme') || 'mint';
 
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
