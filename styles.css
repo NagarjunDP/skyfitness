@@ -2445,4 +2445,104 @@ body {
   text-shadow: 0 0 10px rgba(255, 95, 158, 0.8);
 }
 
+/* Location Actions Button Layout */
+.location-actions-group {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.location-actions-group .btn {
+  flex: 1 1 auto;
+  min-width: 140px;
+  text-align: center;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  /* Hide header Instagram button on narrow mobile header to prevent logo/button crowding */
+  .nav-actions .nav-instagram-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Location Section Buttons Grid */
+  .location-actions-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+
+  .location-actions-group .btn {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 6px;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .location-actions-group .btn-instagram {
+    grid-column: span 2;
+  }
+
+  .map-card-center h3 {
+    font-size: 1.6rem !important;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 380px) {
+  .location-actions-group {
+    grid-template-columns: 1fr;
+  }
+
+  .location-actions-group .btn-instagram {
+    grid-column: span 1;
+  }
+}
+
+/* Floating Sticky Mobile Action Bar Layout */
+.floating-mobile-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(4, 6, 5, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-green);
+  padding: 8px 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 1800;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.8);
+}
+
+.floating-mobile-bar .mobile-action-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 10px 4px;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.floating-mobile-bar .instagram-svg-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+
 
